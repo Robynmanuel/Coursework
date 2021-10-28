@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After School Lessons</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <main>
+          <h1>{{sitename}}</h1>
+          <button>{{cart.length}} Checkout</button><br>
+          <img v-bind:src='Lessons.Image'width='120px' height="110px">
+          <h2>{{Lessons.Subject}}</h2>
+          <em>Price: {{Lessons.Price}}</em><br>
+          <em>{{Lessons.Location}}</em><br>
+          <h4>No of Spaces: {{Lessons.Spaces}}</h4>
+          <button>Add to cart</button>
+        </main>
+    </div>
+    <script>
+        let Lessons = new Vue({
+            el: '#app',
+            data: {
+                sitename: 'After School Lessons',
+                Lessons: {
+                    id: 1,
+                    Subject: 'Maths',
+                    Price: '$100',
+                    Location: 'London',
+                    Spaces: 5,
+                    Image: 'photos/math.jpg',
+                },
+                cart:[],
+            },
+         metthod: {
+           AddToCart(){
+             this.Lessons.push(this.Lessons.id);
+           },
+         },
+         computed: {
+          
+         }
+        });
+    </script>
+</body>
+</html>
