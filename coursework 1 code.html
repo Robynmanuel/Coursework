@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Lessons</title>
+</head>
+<body>
+    <div id="app">
+        <main>
+            <h1>{{}}</h1>
+        </main>
+    </div>
+    
+    <script>
+      let webstore = new Vue({
+            el: '#app',
+            data: {
+                sitename: 'After school lessons',
+                showProduct: true,
+                product: {
+                    id: "001",
+                    title: "Math",
+                    location: "London",
+                    price: 100,
+                    image: "product-fullsize.png",
+                    availableInventory: 5
+                }
+            }
+                })
+    </script>
+</body>
+</html>
