@@ -1,0 +1,19 @@
+#app{
+    display: flex;
+    width: 30%;
+    float: left;
+}
+
+#im{
+    flex-grow: 1;
+    margin-top: 32%;
+    margin-left: -75%;
+    width: 10px;
+    height: 90px;
+}
+
+#sub{
+    flex-grow: 1;
+    margin-top: 20%;
+    margin-left: 20px;
+}
